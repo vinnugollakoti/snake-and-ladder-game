@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>select mode</title>
+    <link rel="stylesheet" href="2.css" />
+  </head>
+  <body>
+    <!-- audio tag for background music -->
+    <audio autoplay loop src="neon-gaming-128925.mp3" id="bgm"></audio>
+    <div id="background">
+      <h1 id="choosemodetoplay">CHOOSE MODE TO PLAY</h1>
+      <div class="mode_selection" align="right">
+        <!-- player vs player mode with onclick function -->
+        <div class="player_vs_player" onclick="openPopup()">
+          <p style="margin-right: 30px; margin-top: 0px">Player vs Player</p>
+        </div>
+
+        
+      </div>
+      <!-- popup code for to take player details from the user -->
+      <div class="popup" id="popup">
+        <h1>Enter Your details</h1>
+        <div class="input-container">
+          <!-- taking first person details -->
+          <div class="person1">
+            <h3 class="player1details">Player 1 details :</h3>
+            <input
+              type="text"
+              placeholder="Enter Player 1 Name"
+              id="inputname1"
+              required
+            /><br />
+            <input
+              type="text"
+              placeholder="Enter Player 1 Nick Name"
+              id="inputnick1"
+              required
+            />
+          </div>
+          <!-- taking second person detaiils -->
+          <div class="person2">
+            <h3>Player 2 details :</h3>
+            <input
+              type="text"
+              placeholder="Enter Player 2 Name"
+              id="inputname2"
+              required
+            /><br />
+            <input
+              type="text"
+              placeholder="Enter Player 2 Nick Name"
+              id="inputnick2"
+              required
+            />
+          </div>
+        </div>
+        <!-- buttons in the popup message -->
+        <div class="button">
+          <!-- cancel button for to close popup  -->
+          <button class="cancel" onclick="closePopup()">Cancel</button>
+          <!-- get started button to go to the next game page -->
+          <button class="btn" onclick="storeinput()">
+            <div>GET STARTED</div>
+            <!-- animations for the get started button -->
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="25px"
+              height="25px"
+              viewBox="0 0 24 24"
+              fill="none"
+            >
+              <path
+                d="M11.6801 14.62L14.2401 12.06L11.6801 9.5"
+                stroke="white"
+                stroke-width="2"
+                stroke-miterlimit="10"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              ></path>
+              <path
+                d="M4 12.0601H14.17"
+                stroke="white"
+                stroke-width="2"
+                stroke-miterlimit="10"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              ></path>
+              <path
+                d="M12 4C16.42 4 20 7 20 12C20 17 16.42 20 12 20"
+                stroke="white"
+                stroke-width="2"
+                stroke-miterlimit="10"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              ></path>
+            </svg>
+          </button>
+
+          <!-- <button onclick="storeinput()">Start</button> -->
+        </div>
+      </div>
+    </div>
+    <script>
+      let popup = document.getElementById("popup");
+
+      function openPopup() {
+        popup.classList.add("open-popup");
+      }
+
+      function closePopup() {
+        popup.classList.remove("open-popup");
+      }
+    </script>
+    <script src="2.js"></script>
+  </body>
+</html>

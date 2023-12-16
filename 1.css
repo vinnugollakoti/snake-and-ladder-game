@@ -1,0 +1,61 @@
+@import url("https://fonts.googleapis.com/css2?family=Knewave&family=Lora:wght@400;500&family=Poppins:wght@200;400&family=Rubik:ital,wght@0,300;0,500;1,300&display=swap");
+/* importing knewave font family  */
+* {
+  max-width: 100%;
+  max-height: 100%;
+}
+
+/* background styling */
+#background {
+  background-image: url("assets/start\ bg.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+/* start button styling */
+.start_div {
+  margin-top: 90px;
+  background-color: #f4bd17;
+  width: 130px;
+  margin-left: 600px;
+
+  /* border style */
+  border: 5px solid #f06259;
+  border-radius: 20px;
+}
+
+.start_tag {
+  font-size: 40px;
+  font-family: knewave;
+}
+/* snake and ladder logo  */
+#game_logo {
+  margin-top: 10px;
+}
+.top {
+  display: flex;
+  justify-content: space-between;
+}
+
+/* making the page responsive for mobiles screens*/
+@media only screen and (max-width: 425px) {
+    * {
+        height: 100%;
+        overflow: hidden;
+    }
+    body {
+        width: 100%;
+        margin-top: -100px;
+    }
+    .top {
+        display: none;
+    }
+    #game_logo {
+        margin-top: -200px;
+    }
+    .start_div {
+        height: 60px;
+        margin-left: 130px;
+        margin-top: 10px;
+    }
+}
